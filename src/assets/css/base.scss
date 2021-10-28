@@ -1,0 +1,74 @@
+.header {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.country-card {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.country-card img {
+  transition: all 0.3s linear !important;
+}
+
+.country-card:hover img {
+  transform: scale(1.1);
+}
+
+.hotel-card {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+
+  &__details {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+
+    &-comment {
+      font-size: 12px;
+    }
+
+    &-rating {
+      padding-right: 8px;
+      padding-left: 8px;
+      background-color: #003580;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-more {
+      &--svg-container {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        svg {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &-btn-select-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @media only screen and (max-width: 900px) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.hotel-header {
+  display: flex;
+  justify-content: space-between;
+}
