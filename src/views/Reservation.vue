@@ -2,12 +2,12 @@
   <div>
     <!-- Tabs with card integration -->
     <b-card no-body>
-      <b-tabs v-model="tabIndex" small card>
+      <b-tabs v-model="tabIndex" small card >
         <b-tab
           v-for="item in reservation.numberOfPeople"
           :key="item"
           :title="`${item}. Person`"
-          :disabled="users[reservation.numberOfPeople] === undefined"
+          :disabled="users.length < item - 1"
         >
           <b-form @submit.prevent="submit">
             <b-form-group label="Name">
@@ -163,10 +163,16 @@ export default {
   },
   watch: {
     tabIndex(val) {
+      this.$v.$reset()
       const users = this.users;
-      if (users.length > val) {
+      if (users[val] !== undefined) {
         this.form = { ...this.users[val] };
+      }else {
+        this.resetForm();
       }
+      setTimeout(() => {
+        this.$refs.nameInput[val].focus();
+      }, 0);
     },
   },
   data() {
@@ -187,22 +193,19 @@ export default {
   },
   methods: {
     submit() {
-      if (this.tabIndex < this.users.length) {
-        let filledUser = this.users.find((item) => item.tc === this.form.tc);
+      let filledUser = this.users.find((item) => item.tc === this.form.tc);
         if (filledUser) {
-          filledUser = {
+          this.users[this.tabIndex] = {
             ...this.form,
-          };
-        }
-      } else {
+          }
+        }else {
         this.users.push(this.form);
         this.$v.$reset();
         this.resetForm();
-        this.tabIndex += 1;
         setTimeout(() => {
-          this.$refs.nameInput[this.tabIndex].focus();
+          this.tabIndex = this.tabIndex + 1;
         }, 0);
-      }
+        }
     },
     resetForm() {
       this.form = {
@@ -246,6 +249,7 @@ export default {
         required,
         format(val) {
           if (
+            val === undefined ||
             val === null ||
             val.length !== 12 ||
             val.split("")[4] !== "-" ||
@@ -259,7 +263,7 @@ export default {
       tc: {
         required,
         format(val) {
-          if (val === null || val.length !== 11) {
+          if (val === undefined || val === null || val.length !== 11) {
             return false;
           }
           return true;
