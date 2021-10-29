@@ -31,8 +31,8 @@
             <div class="hotel-card__details-more--svg-container">
               <img
                 v-for="service in item.services"
-                :key="service"
-                :src="require(`../assets/icons/${service}.png`)"
+                :key="service.service"
+                :src="require(`../assets/icons/${service.service}.png`)"
                 width="30"
                 height="30"
                 alt=""

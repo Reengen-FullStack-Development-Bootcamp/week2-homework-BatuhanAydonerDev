@@ -31,8 +31,25 @@ export default [
           "https://exp.cdn-hotels.com/hotels/23000000/22180000/22177000/22176908/19351573_z.jpg?impolicy=fcrop&w=1000&h=666&q=medium",
         star: 5,
         location: "Barcelona",
-        services: ["wifi", "fruit", "restaurant", "sport", "library"],
-        comments: ["", "", ""],
+        services: [
+          { service: "wifi", description: "You have a speed internet" },
+          { service: "fruit", description: "You have room service" },
+          {
+            service: "restaurant",
+            description:
+              "You have a restaurant which have a lot of different kitchen",
+          },
+          { service: "sport", description: "You can go to the gym" },
+          { service: "library", description: "You can go to the libray" },
+        ],
+        comments: [
+          {
+            name: "Batuhan",
+            title: "Soooooo gooodddd",
+            comment: "I enjoyed coming here.",
+            rating: "9.0",
+          },
+        ],
         photos: [
           "https://exp.cdn-hotels.com/hotels/23000000/22180000/22177000/22176908/19351573_z.jpg?impolicy=fcrop&w=1000&h=666&q=medium",
           "https://exp.cdn-hotels.com/hotels/23000000/22180000/22177000/22176908/19351573_z.jpg?impolicy=fcrop&w=1000&h=666&q=medium",
