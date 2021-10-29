@@ -18,7 +18,7 @@
         <b-col md="3" lg="5">
           <div class="hotel-card__details">
             <div>
-              <h6>{{ ratingTitle }}</h6>
+              <h6>{{ ratingTitle(item.rating) }}</h6>
               <div class="hotel-card__details-comment">
                 {{ item.comments.length }} comments
               </div>
@@ -59,19 +59,6 @@ export default {
   methods: {
     selectHotel(id) {
       this.$router.push({ name: "Hotel", params: { id } });
-    },
-  },
-  computed: {
-    ratingTitle() {
-      if (this.item.rating >= 7.0 && this.item.rating <= 8.0) {
-        return "Good";
-      } else if (this.item.rating >= 8.0 && this.item.rating <= 9.0) {
-        return "Awesome";
-      } else if (this.item.rating > 9.0) {
-        return "Perfect";
-      }
-
-      return "So bad";
     },
   },
 };

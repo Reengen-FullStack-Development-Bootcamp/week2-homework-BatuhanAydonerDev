@@ -1,4 +1,3 @@
-<script>
 export default {
   methods: {
     ratingTitle(rating) {
@@ -13,5 +12,9 @@ export default {
       return "So bad";
     },
   },
+  filters: {
+    price(val) {
+      return "$" + val;
+    },
+  },
 };
-</script>

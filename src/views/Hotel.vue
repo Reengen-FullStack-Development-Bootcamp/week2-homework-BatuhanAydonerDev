@@ -31,7 +31,7 @@
           <b-card-sub-title :sub-title="hotel.shortDescription"></b-card-sub-title>
         </div>
         <div>
-          <h3>{{ hotel.price }}</h3>
+          <h3>{{ hotel.price | price }}</h3>
           <p>per/night</p>
         </div>
       </div>
@@ -47,10 +47,39 @@
         </div>
       </div>
       <hr />
-      <b-button variant="primary" @click="checkedReservation = !checkedReservation">
-        {{ checkedReservation ? "Hide" : "Show" }} Reservation Card
-      </b-button>
-      <b-card v-if="checkedReservation" class="mt-2"></b-card>
+      <b-card class="mt-2">
+        <b-form @submit.prevent="submit">
+          <b-form-group label="Number of People">
+            <b-form-input
+              id="number-of-people-input"
+              ref="countInput"
+              v-model="reservation.numberOfPeople"
+              :value="reservation.numberOfPeople"
+              type="number"
+              min="1"
+              max="10"
+              required
+            ></b-form-input>
+          </b-form-group>
+          <b-form-group label="Day(s)">
+            <b-form-input
+              id="number-of-day-input"
+              ref="dayInput"
+              v-model="reservation.numberOfDays"
+              :value="reservation.numberOfDays"
+              type="number"
+              min="1"
+              max="7"
+              required
+            ></b-form-input>
+          </b-form-group>
+          <div class="reserve-container mt-3">
+            <h2 :class="{ oldPrice: morePeople }">{{ hotel.price | price }}</h2>
+            <h2 v-if="morePeople">{{ totalPrice | price }}</h2>
+            <b-button variant="primary" type="submit">Reserve</b-button>
+          </div>
+        </b-form>
+      </b-card>
     </b-col>
     <b-col sm="12" md="6">
       <div>
@@ -89,10 +118,18 @@
 
 <script>
 import hotels from "../data/hotels";
-import RatingTitle from "../mixins/RatingTitle.vue";
 
 export default {
-  mixins: [RatingTitle],
+  computed: {
+    totalPrice() {
+      return (
+        this.hotel.price * this.reservation.numberOfPeople * this.reservation.numberOfDays
+      );
+    },
+    morePeople() {
+      return this.reservation.numberOfPeople > 1 || this.reservation.numberOfDays > 1;
+    },
+  },
   created() {
     const urlCity = this.$route.params.city;
     const city = hotels.find((hotel) => hotel.city.toLowerCase() === urlCity);
@@ -101,11 +138,36 @@ export default {
     );
     this.hotel = hotel;
   },
+  mounted() {
+    this.$refs.countInput.focus();
+  },
   data() {
     return {
       hotel: null,
-      checkedReservation: false,
+      reservation: {
+        numberOfPeople: 1,
+        numberOfDays: 1,
+      },
     };
+  },
+  methods: {
+    submit() {
+      this.$router.push({
+        name: "Reservation",
+        params: {
+          reservation: {
+            name: this.hotel.name,
+            numberOfPeople: parseInt(this.reservation.numberOfPeople),
+            totalPrice: this.price(),
+          },
+        },
+      });
+    },
+    price() {
+      return (
+        this.hotel.price * this.reservation.numberOfPeople * this.reservation.numberOfDays
+      );
+    },
   },
 };
 </script>

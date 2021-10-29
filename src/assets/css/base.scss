@@ -115,3 +115,23 @@
     }
   }
 }
+
+.reserve-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.oldPrice {
+  color: rgb(207, 207, 207);
+  text-decoration: line-through;
+}
+
+.error-outline {
+  border-color: red !important;
+}
+
+.error {
+  color: red;
+}

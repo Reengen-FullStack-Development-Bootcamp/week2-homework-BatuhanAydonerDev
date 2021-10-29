@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Hotel from "../views/Hotel.vue";
 import Hotels from "../views/Hotels.vue";
+import Reservation from "../views/Reservation.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,12 @@ const routes = [
     path: "/hotels/:city/hotel/:id",
     name: "Hotel",
     component: Hotel,
+    props: true,
+  },
+  {
+    path: "/reservation",
+    name: "Reservation",
+    component: Reservation,
     props: true,
   },
 ];

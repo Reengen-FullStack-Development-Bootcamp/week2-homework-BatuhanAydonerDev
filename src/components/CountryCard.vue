@@ -5,7 +5,7 @@
       :img-src="item.countryImage"
       img-alt="Card Image"
       text-variant="white"
-      :title="item.country"
+      :title="item.city"
       :sub-title="`${item.hotels.length} Hotel(s)`"
       class="country-card"
       @click="selectCountry(item.city)"

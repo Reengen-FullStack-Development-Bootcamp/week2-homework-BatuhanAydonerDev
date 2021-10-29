@@ -25,7 +25,7 @@ export default [
         pariatur unde quibusdam officia eum dignissimos doloribus veritatis perspiciatis
         quisquam fuga cum minima harum laboriosam suscipit placeat consequatur. Tenetur
         voluptates, vitae nihil dolor aspernatur quo inventore?`,
-        price: "$250",
+        price: 250,
         rating: 9.1,
         image:
           "https://exp.cdn-hotels.com/hotels/23000000/22180000/22177000/22176908/19351573_z.jpg?impolicy=fcrop&w=1000&h=666&q=medium",
