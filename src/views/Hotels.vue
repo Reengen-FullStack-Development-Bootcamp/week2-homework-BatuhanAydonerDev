@@ -14,8 +14,9 @@ export default {
   },
   data() {
     return {
-      hotels: [],
-      onlyHotel: true,
+      hotels: [], // Array of hotels
+      onlyHotel: true, // Control that url has id as param.
+
     };
   },
   watch: {

@@ -87,18 +87,22 @@ export default {
     };
   },
   methods: {
+    // Hide dialog and emit to parent.
     submit() {
       this.$refs["payment-dialog"].hide();
       this.$emit("paid");
     },
   },
   computed: {
+    // Control credit card type.
     creditCardType() {
       return this.creditCardNo[0] % 2 === 0;
     },
+    // Format credit card no.
     cardNo() {
       return this.creditCardNo.replace(/\W/gi, "").replace(/(.{4})/g, "$1 ");
     },
+    // Format end date.
     date() {
       let date = this.endDate.split("");
       if (this.endDate.length >= 2) {

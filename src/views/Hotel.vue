@@ -117,8 +117,8 @@
           </b-form-group>
 
           <div class="reserve-container mt-3">
-            <h2 :class="{ oldPrice: morePeople }">{{ hotel.price | price }}</h2>
-            <h2 v-if="morePeople">{{ totalPrice | price }}</h2>
+            <h2 :class="{ oldPrice: controlPrice }">{{ hotel.price | price }}</h2>
+            <h2 v-if="controlPrice">{{ totalPrice | price }}</h2>
             <b-button variant="primary" type="submit">Reserve</b-button>
           </div>
         </b-form>
@@ -137,18 +137,26 @@ export default {
     MapDailog,
   },
   computed: {
+    // Returns total price
     totalPrice() {
       return (
         this.hotel.price * this.reservation.numberOfPeople * this.reservation.numberOfDays
       );
     },
-    morePeople() {
+    /**
+     * Returns a boolean value.
+     * Control reservation.numberOfPeople and reservation.numberOfDaysfor old and new price.
+     */
+    controlPrice() {
       return this.reservation.numberOfPeople > 1 || this.reservation.numberOfDays > 1;
     },
   },
   created() {
+    // city at url
     const urlCity = this.$route.params.city;
+    // City at hotels array.
     const city = hotels.find((hotel) => hotel.city.toLowerCase() === urlCity);
+    // Hotel at hotels array of city.
     const hotel = city.hotels.find(
       (hotel) => hotel.id === parseInt(this.$route.params.id)
     );
@@ -168,6 +176,10 @@ export default {
     };
   },
   methods: {
+    /**
+     * Submit for reservation.
+     * Push to Reservation page.
+     */
     submit() {
       this.$router.push({
         name: "Reservation",
@@ -180,6 +192,7 @@ export default {
         },
       });
     },
+    // Returns total price.
     price() {
       return (
         this.hotel.price * this.reservation.numberOfPeople * this.reservation.numberOfDays

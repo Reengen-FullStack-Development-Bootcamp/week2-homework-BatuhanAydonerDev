@@ -184,6 +184,7 @@ import PaymentDialog from "../components/Dialogs/PaymentDialog.vue";
 export default {
   components: { PaymentDialog, MessageDialog },
   props: {
+    // Props from url.
     reservation: {
       type: Object,
       required: true,
@@ -191,6 +192,10 @@ export default {
   },
   mixins: ["Format"],
   watch: {
+    /**
+     * Reset validation and if user is undefined, reset form.
+     * Focus next name input.
+     */
     tabIndex(val) {
       this.$v.$reset();
       const users = this.users;
@@ -207,6 +212,7 @@ export default {
     },
   },
   computed: {
+    // Return name and surname of first user at users.
     fullName() {
       if (this.users[0] === undefined) {
         return "";
@@ -232,6 +238,9 @@ export default {
     };
   },
   methods: {
+    /**
+     * Save or change user.
+     */
     submit() {
       let filledUser = this.users.find((item) => item.tc === this.form.tc);
       if (filledUser) {
@@ -247,6 +256,7 @@ export default {
         }, 0);
       }
     },
+    // Reset form.
     resetForm() {
       this.form = {
         name: null,
@@ -259,6 +269,7 @@ export default {
         sex: 0,
       };
     },
+    // Show MessageDialog.
     paid() {
       this.$bvModal.show("message-dialog");
     },

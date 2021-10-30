@@ -10,13 +10,18 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 
 Vue.config.productionTip = false;
 
+// Bootstrap-vue
 Vue.use(BootstrapVue);
+// Bootstrap-vue icons
 Vue.use(IconsPlugin);
 
+// Vuelidate for validation
 Vue.use(Vuelidate);
 
+// Vue router
 Vue.use(router);
 
+// Format mixin
 Vue.mixin(Format);
 
 new Vue({

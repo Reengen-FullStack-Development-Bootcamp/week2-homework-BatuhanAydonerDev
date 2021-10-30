@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      allHotels: [...hotels],
+      allHotels: [...hotels], // Array of hotel
     };
   },
 };
