@@ -158,7 +158,7 @@
           >
         </div>
         <payment-dialog @paid="paid" />
-        <message-dialog :message="`Congratulations ${fullName}, payment is successful`" />
+        <message-dialog :message="`Thanks ${fullName}, payment is successful`" />
       </div>
     </b-col>
     <b-col sm="12" md="4" order-sm="1" order-lg="2">
