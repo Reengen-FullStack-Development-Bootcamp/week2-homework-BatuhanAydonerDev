@@ -31,6 +31,7 @@ export default [
           "https://exp.cdn-hotels.com/hotels/23000000/22180000/22177000/22176908/19351573_z.jpg?impolicy=fcrop&w=1000&h=666&q=medium",
         star: 5,
         location: "Barcelona",
+        coordinates: { lat: 41.39913232, long: 2.16267586 },
         services: [
           { service: "wifi", description: "You have a speed internet" },
           { service: "fruit", description: "You have room service" },

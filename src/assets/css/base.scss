@@ -23,6 +23,13 @@
   border: 1px solid gray;
   border-radius: 5px;
 
+  .star {
+    text-align: left;
+    display: block !important;
+    padding: 0px !important;
+    color: rgb(201, 201, 0);
+  }
+
   &__details {
     display: flex;
     justify-content: flex-end;
@@ -116,6 +123,11 @@
   }
 }
 
+.reservation-card {
+  position: sticky !important;
+  top: 10px;
+}
+
 .reserve-container {
   display: flex;
   justify-content: flex-end;
@@ -134,4 +146,41 @@
 
 .error {
   color: red;
+}
+
+.credit-card {
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  padding: 1.5rem;
+  background-color: rgb(151, 151, 151);
+  position: relative;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 5px;
+
+  .card-no {
+    color: white;
+    font-weight: bold;
+  }
+
+  .end-date {
+    margin-left: 50px;
+  }
+
+  .type {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+.payment-form {
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: 200px;
 }

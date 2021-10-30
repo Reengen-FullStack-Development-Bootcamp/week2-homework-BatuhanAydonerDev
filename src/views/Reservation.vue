@@ -2,7 +2,7 @@
   <div>
     <!-- Tabs with card integration -->
     <b-card no-body>
-      <b-tabs v-model="tabIndex" small card >
+      <b-tabs v-model="tabIndex" small card>
         <b-tab
           v-for="item in reservation.numberOfPeople"
           :key="item"
@@ -139,14 +139,14 @@
       </b-tabs>
     </b-card>
     <div class="mt-2 d-flex justify-content-end">
-      <b-button variant="primary" :disabled="reservation.numberOfPeople !== users.length"
-        >Complete</b-button
-      >
+      <b-button variant="primary" v-b-modal.payment-dialog>Complete</b-button>
     </div>
+    <payment-dialog />
   </div>
 </template>
 
 <script>
+//:disabled="reservation.numberOfPeople !== users.length"
 import {
   required,
   email,
@@ -154,7 +154,10 @@ import {
   maxLength,
   minValue,
 } from "vuelidate/lib/validators";
+import PaymentDialog from "../components/Dialogs/PaymentDialog.vue";
+
 export default {
+  components: { PaymentDialog },
   props: {
     reservation: {
       type: Object,
@@ -163,16 +166,18 @@ export default {
   },
   watch: {
     tabIndex(val) {
-      this.$v.$reset()
+      this.$v.$reset();
       const users = this.users;
       if (users[val] !== undefined) {
         this.form = { ...this.users[val] };
-      }else {
+      } else {
         this.resetForm();
       }
-      setTimeout(() => {
-        this.$refs.nameInput[val].focus();
-      }, 0);
+      if (val < this.reservation.numberOfPeople) {
+        setTimeout(() => {
+          this.$refs.nameInput[val].focus();
+        }, 0);
+      }
     },
   },
   data() {
@@ -194,18 +199,18 @@ export default {
   methods: {
     submit() {
       let filledUser = this.users.find((item) => item.tc === this.form.tc);
-        if (filledUser) {
-          this.users[this.tabIndex] = {
-            ...this.form,
-          }
-        }else {
+      if (filledUser) {
+        this.users[this.tabIndex] = {
+          ...this.form,
+        };
+      } else {
         this.users.push(this.form);
         this.$v.$reset();
         this.resetForm();
         setTimeout(() => {
           this.tabIndex = this.tabIndex + 1;
         }, 0);
-        }
+      }
     },
     resetForm() {
       this.form = {

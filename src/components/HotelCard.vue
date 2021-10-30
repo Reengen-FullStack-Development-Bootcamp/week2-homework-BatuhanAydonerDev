@@ -10,6 +10,13 @@
         </b-col>
         <b-col md="3" lg="5">
           <b-card-title :title="item.name" />
+          <b-form-rating
+            :value="item.rating"
+            size="sm"
+            readonly
+            no-border
+            class="star"
+          ></b-form-rating>
           <b-card-sub-title :sub-title="item.shortDescription" />
           <b-card-body class="mt-1 p-0">
             {{ item.description }}
