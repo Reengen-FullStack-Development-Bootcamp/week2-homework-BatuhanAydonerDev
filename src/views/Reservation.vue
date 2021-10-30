@@ -150,9 +150,15 @@
           </b-tabs>
         </b-card>
         <div class="mt-2 d-flex justify-content-end">
-          <b-button variant="primary" v-b-modal.payment-dialog>Complete</b-button>
+          <b-button
+            variant="primary"
+            v-b-modal.payment-dialog
+            :disabled="reservation.numberOfPeople !== users.length"
+            >Complete</b-button
+          >
         </div>
-        <payment-dialog />
+        <payment-dialog @paid="paid" />
+        <message-dialog :message="`Congratulations ${fullName}, payment is successful`" />
       </div>
     </b-col>
     <b-col sm="12" md="4" order-sm="1" order-lg="2">
@@ -165,7 +171,6 @@
 </template>
 
 <script>
-//:disabled="reservation.numberOfPeople !== users.length"
 import {
   required,
   email,
@@ -173,10 +178,11 @@ import {
   maxLength,
   minValue,
 } from "vuelidate/lib/validators";
+import MessageDialog from "../components/Dialogs/MessageDialog.vue";
 import PaymentDialog from "../components/Dialogs/PaymentDialog.vue";
 
 export default {
-  components: { PaymentDialog },
+  components: { PaymentDialog, MessageDialog },
   props: {
     reservation: {
       type: Object,
@@ -198,6 +204,15 @@ export default {
           this.$refs.nameInput[val].focus();
         }, 0);
       }
+    },
+  },
+  computed: {
+    fullName() {
+      if (this.users[0] === undefined) {
+        return "";
+      }
+
+      return this.users[0].name + " " + this.users[0].surname;
     },
   },
   data() {
@@ -243,6 +258,9 @@ export default {
         tc: null,
         sex: 0,
       };
+    },
+    paid() {
+      this.$bvModal.show("message-dialog");
     },
   },
   validations: {

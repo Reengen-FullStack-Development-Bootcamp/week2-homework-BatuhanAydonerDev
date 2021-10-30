@@ -1,5 +1,7 @@
 <template>
-  <header class="header bg-blue"><h1>bookingany - Vuejs</h1></header>
+  <header class="header bg-info">
+    <b-container><h4>bookingany-vuejs.com</h4></b-container>
+  </header>
 </template>
 
 <script>

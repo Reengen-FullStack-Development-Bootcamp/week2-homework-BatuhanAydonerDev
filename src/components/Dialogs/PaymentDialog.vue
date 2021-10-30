@@ -1,5 +1,5 @@
 <template>
-  <b-modal id="payment-dialog" title="Payment Dialog" hide-footer>
+  <b-modal id="payment-dialog" ref="payment-dialog" title="Payment Dialog" hide-footer>
     <div class="credit-card">
       <div class="card-no">{{ cardNo }}</div>
       <div class="end-date">{{ date }}</div>
@@ -88,7 +88,8 @@ export default {
   },
   methods: {
     submit() {
-      console.log("submit");
+      this.$refs["payment-dialog"].hide();
+      this.$emit("paid");
     },
   },
   computed: {
@@ -118,8 +119,8 @@ export default {
     },
     endDate: {
       required,
-      min: minLength(5),
-      max: maxLength(5),
+      min: minLength(4),
+      max: maxLength(4),
     },
     cvv: {
       required,
