@@ -1,5 +1,5 @@
 <template>
-  <b-modal id="payment-dialog" title="Payment Dialog">
+  <b-modal id="payment-dialog" title="Payment Dialog" hide-footer>
     <div class="credit-card">
       <div class="card-no">{{ cardNo }}</div>
       <div class="end-date">{{ date }}</div>
@@ -20,22 +20,62 @@
     </div>
     <b-form class="payment-form" @submit.prevent="submit">
       <b-form-group label="Name">
-        <b-form-input v-model="fullName" type="text" required></b-form-input>
+        <b-form-input
+          v-model.trim="$v.fullName.$model"
+          type="text"
+          required
+        ></b-form-input>
+        <div class="error" v-if="!$v.fullName.required && $v.fullName.$anyDirty">
+          Field is required
+        </div>
       </b-form-group>
       <b-form-group label="Card NO">
-        <b-form-input v-model="creditCardNo" type="text" max="12" required></b-form-input>
+        <b-form-input
+          v-model="$v.creditCardNo.$model"
+          type="text"
+          max="12"
+          required
+        ></b-form-input>
+        <div class="error" v-if="!$v.creditCardNo.required && $v.creditCardNo.$anyDirty">
+          Field is required
+        </div>
+        <div
+          class="error"
+          v-if="
+            (!$v.creditCardNo.min || !$v.creditCardNo.max) && $v.creditCardNo.$anyDirty
+          "
+        >
+          Credit Card No is not at expected form.
+        </div>
       </b-form-group>
       <b-form-group label="End Date">
-        <b-form-input v-model="endDate" type="text" required></b-form-input>
+        <b-form-input v-model="$v.endDate.$model" type="text" required></b-form-input>
+        <div class="error" v-if="!$v.endDate.required && $v.endDate.$anyDirty">
+          Field is required
+        </div>
+        <div
+          class="error"
+          v-if="(!$v.endDate.min || !$v.endDate.max) && $v.endDate.$anyDirty"
+        >
+          Credit Card No is not at expected form.
+        </div>
       </b-form-group>
       <b-form-group label="CVV">
-        <b-form-input v-model="cvv" type="number" required></b-form-input>
+        <b-form-input v-model.trim="$v.cvv.$model" type="number" required></b-form-input>
+        <div class="error" v-if="!$v.cvv.required && $v.cvv.$anyDirty">
+          Field is required
+        </div>
+        <div class="error" v-if="(!$v.cvv.min || !$v.cvv.max) && $v.cvv.$anyDirty">
+          Credit Card No is not at expected form.
+        </div>
       </b-form-group>
+      <b-button variant="primary" type="submit" class="mt-3">Complete</b-button>
     </b-form>
   </b-modal>
 </template>
 
 <script>
+import { required, minLength, maxLength } from "vuelidate/lib/validators";
 export default {
   data() {
     return {
@@ -45,6 +85,11 @@ export default {
       endDateText: "",
       cvv: null,
     };
+  },
+  methods: {
+    submit() {
+      console.log("submit");
+    },
   },
   computed: {
     creditCardType() {
@@ -60,6 +105,26 @@ export default {
         return date.join("").toString();
       }
       return this.endDate;
+    },
+  },
+  validations: {
+    fullName: {
+      required,
+    },
+    creditCardNo: {
+      required,
+      min: minLength(16),
+      max: maxLength(16),
+    },
+    endDate: {
+      required,
+      min: minLength(5),
+      max: maxLength(5),
+    },
+    cvv: {
+      required,
+      min: minLength(3),
+      max: maxLength(3),
     },
   },
 };
