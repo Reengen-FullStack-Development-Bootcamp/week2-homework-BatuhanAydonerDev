@@ -1,12 +1,9 @@
 <template>
   <b-col md="12">
-    <div class="hotel-card">
+    <div class="hotel-card m-2">
       <b-row>
         <b-col md="6" lg="2">
-          <b-card-img
-            src="https://cf.bstatic.com/xdata/images/hotel/square200/8337047.webp?k=90324122f0d5970dfa5b1d98e6a39a4f2ff51452cef03019f42c6dad91c57fc2&o=&s=1"
-            alt=""
-          />
+          <b-card-img :src="item.image" alt="" />
         </b-col>
         <b-col md="3" lg="5">
           <b-card-title :title="item.name" />

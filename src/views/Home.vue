@@ -6,7 +6,7 @@
 
 <script>
 // @ is an alias to /src
-import hotels from "../data/hotels.js";
+import hotels from "../data/hotels.json";
 import CountryList from "../components/CountryList.vue";
 
 export default {

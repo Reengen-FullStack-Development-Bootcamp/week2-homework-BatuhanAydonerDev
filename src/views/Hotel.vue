@@ -13,16 +13,10 @@
         img-height="480"
       >
         <b-carousel-slide
-          caption="First slide"
-          img-src="https://picsum.photos/1024/480/?image=10"
-        ></b-carousel-slide>
-        <b-carousel-slide
-          caption="Second Slide"
-          img-src="https://picsum.photos/1024/480/?image=12"
-        ></b-carousel-slide>
-        <b-carousel-slide
-          caption="Third Slide"
-          img-src="https://picsum.photos/1024/480/?image=22"
+          v-for="(photo, i) in hotel.photos"
+          :key="i"
+          :img-src="photo"
+          style="width: 100%; height: 400px"
         ></b-carousel-slide>
       </b-carousel>
       <div class="hotel-header">
@@ -85,7 +79,7 @@
       </div>
     </b-col>
     <b-col sm="12" md="6">
-      <b-card class="mb-2 reservation-card">
+      <b-card class="mb-2 reservation-card" title="Reservation">
         <b-form @submit.prevent="submit">
           <b-form-group label="Number of People">
             <b-form-input
@@ -136,7 +130,7 @@
 
 <script>
 import MapDailog from "../components/Dialogs/MapDailog.vue";
-import hotels from "../data/hotels.js";
+import hotels from "../data/hotels.json";
 
 export default {
   components: {

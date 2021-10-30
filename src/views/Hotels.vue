@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import hotelData from "../data/hotels.js";
+import hotelData from "../data/hotels.json";
 import HotelList from "../components/HotelList.vue";
 export default {
   components: {

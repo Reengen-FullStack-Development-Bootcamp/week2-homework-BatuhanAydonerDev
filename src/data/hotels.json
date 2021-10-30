@@ -1,0 +1,279 @@
+[
+  {
+    "id": 1,
+    "city": "Barcelona",
+    "countryImage": "https://media.istockphoto.com/photos/spanish-cities-la-sagrada-familia-barcelona-golden-hour-picture-id875273240?b=1&k=20&m=875273240&s=170667a&w=0&h=EKaHhTcVBk_UFe_Zuao1ljPjdizwPw05zO1jyry188w=",
+    "hotels": [
+      {
+        "id": 1,
+        "name": "Generator Barcelona",
+        "description": "Generator Barcelona is located 500 m from the fashionable Passeig de Gracia Avenue. The hostel offers a 24-hour reception, free private lockers in shared dormitories and free Wi-Fi in public areas.",
+        "shortDescription": "Stay in the heart of Barcelona",
+        "longDescription": "Generator Barcelona is located 500 m from the fashionable Passeig de Gracia Avenue. The hostel offers a 24-hour reception, free private lockers in shared dormitories and free Wi-Fi in public areas.Diagonal and Verdaguer metro stations are within 5 minutes’ walk from Generator Barcelona. The Gràcia district, which has plenty of boutique shops and bars, is only 200 m away.Both private rooms and dormitories have air conditioning and heating, as well as individual power sockets and reading lamps for each bed. Female-only dormitories include hairdryers and other amenities.They also feature an en suite bathroom, a sink and a mirror. Bed linen is included, while towels can be rented at the reception. Dormitories are available for guests over 18 years old.Guests can have a daily breakfast for an extra cost. Generator Barcelona also has a communal lounge and a luggage storage service.This is our guests' favourite part of Barcelona, according to independent reviews.Couples particularly like the location — they rated it 8.8 for a two-person trip.We speak your language!",
+        "price": 250,
+        "rating": "9.0",
+        "image": "https://cf.bstatic.com/xdata/images/hotel/square200/20493928.webp?k=8b49a3e054035ef27887d973dd6c839ab7e28a4c5333ef450b7a039f8fb3b56e&o=&s=1",
+        "star": 5,
+        "location": "Còrsega 377, Gràcia, 08037 Barcelona, Spain",
+        "coordinates": {
+          "lat": 41.39913232,
+          "long": 2.16267586
+        },
+        "services": [
+          {
+            "service": "wifi",
+            "description": "You have a speed internet"
+          },
+          {
+            "service": "fruit",
+            "description": "You have room service"
+          },
+          {
+            "service": "restaurant",
+            "description": "You have a restaurant which have a lot of different kitchen"
+          },
+          {
+            "service": "sport",
+            "description": "You can go to the gym"
+          },
+          {
+            "service": "library",
+            "description": "You can go to the libray"
+          }
+        ],
+        "comments": [
+          {
+            "name": "Corinna",
+            "title": "So good",
+            "comment": "Good Breakfast, the room was also really good, I had a lot of space, toilette and shower was nice:) The rooftop is really nice👌🏽",
+            "rating": "9.0"
+          },
+          {
+            "name": "Michaelas",
+            "title": "Amazing",
+            "comment": "The staff was exceptional. The location is awesome and it feels safe. Breakfast was good.",
+            "rating": "9.5"
+          },
+          {
+            "name": "Charlotte",
+            "title": "Incredible",
+            "comment": "The room was really clean and the staff were helpful and friendly. It is a really great location, close to cafes and shops in Gracia. Highly recommend this hostel.",
+            "rating": "8.5"
+          }
+        ],
+        "photos": [
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/20493928.jpg?k=44f79b76d43c575aa9b53eeedb87493747302f4ab196a156592866e8481db17f&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/224669734.jpg?k=8a14b8b89dac45f2d5f6bd2f7f985ecee293a68a92bcf5261fefe4614539bed9&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/20493828.jpg?k=61ae0a73ac04543309d61f3ab52bcda8498c5437b799fb5d8af7e6bc6f0bb451&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/20493764.jpg?k=e1c5126f5c93cf36a5ea4327efefc9898f1b1a54805c109ae7404c35f5f9b2b4&o=&hp=1"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Hotel Paxton Barcelona",
+        "description": "Hotel Paxton Barcelona features a restaurant, seasonal outdoor swimming pool, a fitness centre and bar in Barcelona. With free WiFi, this 4-star hotel has a shared lounge and a garden. The accommodation provides a 24-hour front desk, room service and currency exchange for guests.",
+        "shortDescription": "Stay in the heart of Barcelona",
+        "longDescription": "You're eligible for a Genius discount at Hotel Paxton Barcelona! To save at this property, all you have to do is sign in.Hotel Paxton Barcelona features a restaurant, seasonal outdoor swimming pool, a fitness centre and bar in Barcelona. With free WiFi, this 4-star hotel has a shared lounge and a garden. The accommodation provides a 24-hour front desk, room service and currency exchange for guests.At the hotel each room comes with air conditioning, a seating area, a flat-screen TV with satellite channels, a safety deposit box and a private bathroom with a shower, bathrobes and slippers. At Hotel Paxton Barcelona every room is fitted with bed linen and towels.Guests at the accommodation can enjoy a continental breakfast.Hotel Paxton Barcelona offers a terrace.Somorrostro Beach is 1.5 km from the hotel, while Sagrada Familia is 2.7 km away. The nearest airport is Barcelona El Prat Airport, 15 km from Hotel Paxton Barcelona.",
+        "price": 250,
+        "rating": "9.0",
+        "image": "https://cf.bstatic.com/xdata/images/hotel/square200/320410315.webp?k=cc1ac7ed2b00032480dd26db527a5082ffe0c0e446148223c07578c672d1aa1b&o=&s=1",
+        "star": 5,
+        "location": "160 Carrer de Llull, Sant Martí, 08005 Barcelona, Spain",
+        "coordinates": {
+          "lat": 41.39940600,
+          "long": 2.20023400
+        },
+        "services": [
+          {
+            "service": "wifi",
+            "description": "You have a speed internet"
+          },
+          {
+            "service": "fruit",
+            "description": "You have room service"
+          },
+          {
+            "service": "restaurant",
+            "description": "You have a restaurant which have a lot of different kitchen"
+          },
+          {
+            "service": "sport",
+            "description": "You can go to the gym"
+          },
+          {
+            "service": "library",
+            "description": "You can go to the libray"
+          }
+        ],
+        "comments": [
+          {
+            "name": "Corinna",
+            "title": "So good",
+            "comment": "Great hotel. It’s a bit “cold” so I would not recommend it for a romantic getaway. But it’s perfect when you go with friends, family etc. Very clean, large rooms and friendly staff.",
+            "rating": "9.0"
+          },
+          {
+            "name": "Michaelas",
+            "title": "Amazing",
+            "comment": "Very friendly helpful staff. Lovely rooms with a degree of sound proofing. Delicious breakfast. Relatively small and therefore personable. Close to metro and beach.",
+            "rating": "9.5"
+          },
+          {
+            "name": "Charlotte",
+            "title": "Incredible",
+            "comment": "The room was really clean and the staff were helpful and friendly. It is a really great location, close to cafes and shops in Gracia. Highly recommend this hostel.",
+            "rating": "8.5"
+          }
+        ],
+        "photos": [
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/320410315.jpg?k=642806d03bbbcf47f093a37aecad3c8ec50e803a251408740e6e82bd8879caed&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/304546256.jpg?k=e78fd0df5cac94a84626ce0bdee885e4231cac53fddec9d1789970567e1b5658&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/304546345.jpg?k=5e01c1d55801b955155e9572ee4efb33e35bd2aa77a4aed6b47ddde673df9e42&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/304545739.jpg?k=18dc36097133f27e4c186d55d29f0d026e69001920a2052ef3fd292811da07ad&o=&hp=1"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "city": "Paris",
+    "countryImage": "https://media.istockphoto.com/photos/aerial-panoramic-cityscape-view-of-paris-france-picture-id877496736?k=20&m=877496736&s=612x612&w=0&h=IBsouHf6pGbNHJ66P_ejLjI0mvek3tP6RWuDcpfGGgE=",
+    "hotels": [
+      {
+        "id": 3,
+        "name": "Le Pigalle Hotel",
+        "description": "Le Pigalle Hotel is located in the 9th district of Paris, just a 5-minute walk from the Moulin Rouge. Guests can relax in the on-site bar or enjoy a bite to eat in the restaurant. Pigalle Metro Station is only a 1-minute walk away and offers direct access to the Arc de Triomphe.",
+        "shortDescription": "Stay in the heart of Paris",
+        "longDescription": "Le Pigalle Hotel is located in the 9th district of Paris, just a 5-minute walk from the Moulin Rouge. Guests can relax in the on-site bar or enjoy a bite to eat in the restaurant. Pigalle Metro Station is only a 1-minute walk away and offers direct access to the Arc de Triomphe.All the rooms are decorated in a unique style with a specific theme such as the historic Pigalle area, the modern Pigalle area or the multicultural Pigalle area. Each room has individual objects, souvenirs, books and second-hand furniture.You will find a 24-hour front desk at the property.Sacré-Coeur is 800 m from Le Pigalle Hotel, while Opéra Garnier is 1.2 km away. Orly Airport is 17 km from the property.Sacré-Coeur is 800 m from Le Pigalle Hotel, while Opéra Garnier is 1.2 km away. Orly Airport is 17 km from the property.This is our guests' favourite part of Paris, according to independent reviews.Couples particularly like the location — they rated it 9.1 for a two-person trip.We speak your language!",
+        "price": 150,
+        "rating": "9.0",
+        "image": "https://cf.bstatic.com/xdata/images/hotel/square200/20493928.webp?k=8b49a3e054035ef27887d973dd6c839ab7e28a4c5333ef450b7a039f8fb3b56e&o=&s=1",
+        "star": 5,
+        "location": "9 rue frochot, 9th arr., 75009 Paris, France",
+        "coordinates": {
+          "lat": 41.39913232,
+          "long": 2.16267586
+        },
+        "services": [
+          {
+            "service": "wifi",
+            "description": "You have a speed internet"
+          },
+          {
+            "service": "fruit",
+            "description": "You have room service"
+          },
+          {
+            "service": "restaurant",
+            "description": "You have a restaurant which have a lot of different kitchen"
+          },
+          {
+            "service": "sport",
+            "description": "You can go to the gym"
+          },
+          {
+            "service": "library",
+            "description": "You can go to the libray"
+          }
+        ],
+        "comments": [
+          {
+            "name": "Corinna",
+            "title": "So good",
+            "comment": "Great location staff very helpful. The whole place was really funky well decorated and quiet unique.",
+            "rating": "9.0"
+          },
+          {
+            "name": "Michaelas",
+            "title": "Amazing",
+            "comment": "Loved the vibe and styling of the hotel. Everything was thought of and it was clean.",
+            "rating": "9.5"
+          },
+          {
+            "name": "Charlotte",
+            "title": "Incredible",
+            "comment": "Super cool boutique hotel in the middle of Pigalle with the best staff ever. Attention to detail from A to Z.",
+            "rating": "8.5"
+          }
+        ],
+        "photos": [
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/60674383.jpg?k=2138d9cd3bba0586a5f4db7844f513fd0fa08ebeee27a488862f7531abbd0be8&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/146897391.jpg?k=fe1449b6230b3c0519e1afa3d833b376b0ccf1de3f2218ad1066803f22725ae9&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/146897388.jpg?k=0b1a51f71315e83b40e50a94c1dd62b7022c8e2e8abb0dd7c926384c21c0297f&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/landmark/max1024/171603.webp?k=7be5a93a919927b47e88aee88c2dc6904b09fe38710abe54a25d748d595cdf3b&o="
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "city": "Rome",
+    "countryImage": "https://www.fodors.com/wp-content/uploads/2018/10/HERO_UltimateRome_Hero_shutterstock789412159.jpg",
+    "hotels": [
+      {
+        "id": 4,
+        "name": "Via Veneto Suites",
+        "description": "Located in Rome and with Piazza Barberini reachable within 1.2 km, Via Veneto Suites provides concierge services, allergy-free rooms, a bar, free WiFi throughout the property and a shared lounge. The property is set 2 km from Piazza di Spagna, 2 km from Via Condotti and 2.1 km from Via Margutta. The accommodation offers room service, ticket service and luggage storage for guests.",
+        "shortDescription": "Stay in the heart of Rome",
+        "longDescription": "Located in Rome and with Piazza Barberini reachable within 1.2 km, Via Veneto Suites provides concierge services, allergy-free rooms, a bar, free WiFi throughout the property and a shared lounge. The property is set 2 km from Piazza di Spagna, 2 km from Via Condotti and 2.1 km from Via Margutta. The accommodation offers room service, ticket service and luggage storage for guests.The guest house will provide guests with air-conditioned rooms offering a desk, a kettle, a minibar, a safety deposit box, a flat-screen TV and a private bathroom with a bidet. At Via Veneto Suites each room has bed linen and towels.A continental breakfast is available daily at the accommodation.Popular points of interest near Via Veneto Suites include Villa Borghese, Spanish Steps and Quirinal Hill. The nearest airport is Rome Ciampino, 15 km from the guest house, and the property offers a paid airport shuttle service.This is our guests' favourite part of Rome, according to independent reviews.We speak your language!",
+        "price": 200,
+        "rating": "9.0",
+        "image": "https://cf.bstatic.com/xdata/images/hotel/square200/133093707.webp?k=a7f52f2d25a0e50cda112024bb6ea48e37df16b1fe2b5ac0261d581dd9c3d5d2&o=&s=1",
+        "star": 5,
+        "location": "21 Corso d'Italia, Via Veneto, 00198 Rome, Italy",
+        "coordinates": {
+          "lat": 41.91082000,
+          "long": 12.49163600
+        },
+        "services": [
+          {
+            "service": "wifi",
+            "description": "You have a speed internet"
+          },
+          {
+            "service": "fruit",
+            "description": "You have room service"
+          },
+          {
+            "service": "restaurant",
+            "description": "You have a restaurant which have a lot of different kitchen"
+          },
+          {
+            "service": "sport",
+            "description": "You can go to the gym"
+          },
+          {
+            "service": "library",
+            "description": "You can go to the libray"
+          }
+        ],
+        "comments": [
+          {
+            "name": "Corinna",
+            "title": "So good",
+            "comment": "Located near the Borghese park, the room was beautifully decorated with a spacious bathroom featuring a walk-in shower.",
+            "rating": "9.0"
+          },
+          {
+            "name": "Michaelas",
+            "title": "Amazing",
+            "comment": "Via Veneto Suites is a great value! This is not a big fancy hotel. If you want that, you have to pay the high prices for it Rome.",
+            "rating": "9.5"
+          },
+          {
+            "name": "Charlotte",
+            "title": "Incredible",
+            "comment": "Great location, cool and kind personnel, stunning baths. The room was sparkling clean and it was very spatious. Also, the breakfast was really good.",
+            "rating": "8.5"
+          }
+        ],
+        "photos": [
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/133093707.jpg?k=8d4dd0121cfee60d69955157e4f488425f8628c283c23c51775f85051cd3b74b&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/179701094.jpg?k=b61614ad14b516aebffa4bf2423bd6b5fdb59f8560d65b1c0848c51e5f515f2b&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/122091946.jpg?k=7eba9e812eec40786aab95e7b0c795448abdce79cf3e80482884e5a40952fa50&o=&hp=1",
+          "https://cf.bstatic.com/xdata/images/landmark/max1024/179574.webp?k=ee90a4e4e668b80314735ecb13482751277a7a4845a9896a38bca0693e275b37&o="
+        ]
+      }
+    ]
+  }
+]

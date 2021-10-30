@@ -7,7 +7,7 @@
       text-variant="white"
       :title="item.city"
       :sub-title="`${item.hotels.length} Hotel(s)`"
-      class="country-card"
+      class="country-card m-2"
       @click="selectCountry(item.city)"
     >
     </b-card>
