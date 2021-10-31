@@ -1,5 +1,6 @@
 <template>
   <b-modal id="payment-dialog" ref="payment-dialog" title="Payment Dialog" hide-footer>
+    <!-- Credit Card -->
     <div class="credit-card">
       <div class="card-no">{{ cardNo }}</div>
       <div class="end-date">{{ date }}</div>
@@ -18,7 +19,9 @@
         />
       </div>
     </div>
+    <!-- Payment Form -->
     <b-form class="payment-form" @submit.prevent="submit">
+      <!-- Fullname -->
       <b-form-group label="Name">
         <b-form-input
           v-model.trim="$v.fullName.$model"
@@ -29,6 +32,7 @@
           Field is required
         </div>
       </b-form-group>
+      <!-- Credit Card No -->
       <b-form-group label="Card NO">
         <b-form-input
           v-model="$v.creditCardNo.$model"
@@ -48,6 +52,7 @@
           Credit Card No is not at expected form.
         </div>
       </b-form-group>
+      <!-- End Date -->
       <b-form-group label="End Date">
         <b-form-input v-model="$v.endDate.$model" type="text" required></b-form-input>
         <div class="error" v-if="!$v.endDate.required && $v.endDate.$anyDirty">
@@ -60,6 +65,7 @@
           Credit Card No is not at expected form.
         </div>
       </b-form-group>
+      <!-- CVV -->
       <b-form-group label="CVV">
         <b-form-input v-model.trim="$v.cvv.$model" type="number" required></b-form-input>
         <div class="error" v-if="!$v.cvv.required && $v.cvv.$anyDirty">
@@ -69,6 +75,7 @@
           Credit Card No is not at expected form.
         </div>
       </b-form-group>
+      <!-- Submit Button of Form -->
       <b-button variant="primary" type="submit" class="mt-3">Complete</b-button>
     </b-form>
   </b-modal>

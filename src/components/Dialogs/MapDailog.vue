@@ -1,5 +1,6 @@
 <template>
   <b-modal id="map-dialog" :title="hotelName" size="md" hide-footer>
+    <!-- Embed -->
     <b-embed
       type="iframe"
       aspect="16by9"

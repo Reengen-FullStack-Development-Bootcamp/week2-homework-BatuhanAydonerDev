@@ -1,4 +1,5 @@
 <template>
+  <!-- Dialog -->
   <b-modal id="message-dialog" centered no-close-on-backdrop @hidden="hiddenDialog">{{
     message
   }}</b-modal>

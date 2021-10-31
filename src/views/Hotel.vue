@@ -1,6 +1,7 @@
 <template>
   <b-row>
     <b-col sm="12" md="6">
+      <!-- Carousel -->
       <b-carousel
         id="carousel-fade"
         style="text-shadow: 0px 0px 2px #000; height: 300px"
@@ -21,6 +22,7 @@
           style="width: 100%; height: 300px"
         ></b-carousel-slide>
       </b-carousel>
+      <!-- Hotel Header -->
       <div class="hotel-header">
         <div>
           <b-card-title :title="hotel.name"></b-card-title>
@@ -31,6 +33,7 @@
           <p>per/night</p>
         </div>
       </div>
+      <!-- Hotel Services -->
       <div class="hotel-services">
         <div class="detail" v-for="service in hotel.services" :key="service.service">
           <img
@@ -43,9 +46,13 @@
         </div>
       </div>
       <hr />
-      <h2>About</h2>
-      <p>{{ hotel.longDescription }}</p>
+      <!-- Hotel About -->
+      <div>
+        <h2>About</h2>
+        <p>{{ hotel.longDescription }}</p>
+      </div>
       <hr />
+      <!-- Hotel Location -->
       <div>
         <h2>
           <b-icon icon="map"></b-icon>
@@ -56,6 +63,7 @@
         >
       </div>
       <hr />
+      <!-- Hotel Details -->
       <div class="hotel-details">
         <div class="hotel-rating">{{ hotel.rating }}</div>
         <div>
@@ -65,6 +73,7 @@
           </div>
         </div>
       </div>
+      <!-- Hotel Comments -->
       <div class="hotel-comments">
         <ul>
           <li v-for="(comment, i) in hotel.comments" :key="i" class="comment">
@@ -80,9 +89,12 @@
         </ul>
       </div>
     </b-col>
+    <!-- Hotel Reservation -->
     <b-col sm="12" md="6">
       <b-card class="mb-2 reservation-card" title="Reservation">
+        <!-- Reservation Form  -->
         <b-form @submit.prevent="submit">
+          <!-- Number of People -->
           <b-form-group label="Number of People">
             <b-form-input
               id="number-of-people-input"
@@ -95,6 +107,7 @@
               required
             ></b-form-input>
           </b-form-group>
+          <!-- Date -->
           <b-form-group label="Date">
             <b-form-datepicker
               id="datepicker-full-width"
@@ -105,6 +118,7 @@
               class="mb-2"
             ></b-form-datepicker>
           </b-form-group>
+          <!-- Day -->
           <b-form-group label="Day(s)">
             <b-form-input
               id="number-of-day-input"
@@ -126,6 +140,7 @@
         </b-form>
       </b-card>
     </b-col>
+    <!-- Map Dialog -->
     <map-dailog :coordinates="hotel.coordinates" :hotelName="hotel.name" />
   </b-row>
 </template>

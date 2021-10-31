@@ -4,14 +4,18 @@
       <div>
         <!-- Tabs with card integration -->
         <b-card no-body>
+          <!-- Tabs -->
           <b-tabs v-model="tabIndex" small card>
+            <!-- Tab  -->
             <b-tab
               v-for="item in reservation.numberOfPeople"
               :key="item"
               :title="`${item}. Person`"
-              :disabled="users.length < item - 1"
+              :disabled="people.length < item - 1"
             >
+              <!-- Person Form -->
               <b-form @submit.prevent="submit">
+                <!-- Name -->
                 <b-form-group label="Name">
                   <b-form-input
                     id="name-input"
@@ -28,6 +32,7 @@
                     Field is required
                   </div>
                 </b-form-group>
+                <!-- Surname -->
                 <b-form-group label="Surname">
                   <b-form-input
                     id="surname-input"
@@ -44,6 +49,7 @@
                     Field is required
                   </div>
                 </b-form-group>
+                <!-- Email -->
                 <b-form-group label="Email">
                   <b-form-input
                     id="email-input"
@@ -59,6 +65,7 @@
                     Email is not at expected form
                   </div>
                 </b-form-group>
+                <!-- Phone -->
                 <b-form-group label="Phone" description="Exp: 5554443322">
                   <b-form-input
                     id="phone-input"
@@ -80,6 +87,7 @@
                     Phone is not at expected form
                   </div>
                 </b-form-group>
+                <!-- Age -->
                 <b-form-group label="Age">
                   <b-form-input
                     id="age-input"
@@ -100,6 +108,7 @@
                     Minimum age is 6
                   </div>
                 </b-form-group>
+                <!-- TC NO -->
                 <b-form-group label="TC NO">
                   <b-form-input
                     id="tc-no-input"
@@ -116,6 +125,7 @@
                     TC No is not at expected form
                   </div>
                 </b-form-group>
+                <!-- HES Code -->
                 <b-form-group label="HES Code" description="Exp: AA11-1111-A1">
                   <b-form-input
                     id="hes-code-input"
@@ -138,6 +148,7 @@
                     HES Code is not at expected form
                   </div>
                 </b-form-group>
+                <!-- Sex -->
                 <b-form-group label="Sex">
                   <b-form-radio v-model="form.sex" value="0">Male</b-form-radio>
                   <b-form-radio v-model="form.sex" value="1">Female</b-form-radio>
@@ -153,14 +164,17 @@
           <b-button
             variant="primary"
             v-b-modal.payment-dialog
-            :disabled="reservation.numberOfPeople !== users.length"
+            :disabled="reservation.numberOfPeople !== people.length"
             >Complete</b-button
           >
         </div>
+        <!-- Payment Dialog -->
         <payment-dialog @paid="paid" />
+        <!-- Message Dialog -->
         <message-dialog :message="`Thanks ${fullName}, payment is successful`" />
       </div>
     </b-col>
+    <!-- Reservation Details -->
     <b-col sm="12" md="4" order-sm="1" order-lg="2">
       <b-card
         :title="reservation.name"
@@ -192,9 +206,9 @@ export default {
      */
     tabIndex(val) {
       this.$v.$reset();
-      const users = this.users;
-      if (users[val] !== undefined) {
-        this.form = { ...this.users[val] };
+      const people = this.people;
+      if (people[val] !== undefined) {
+        this.form = { ...this.people[val] };
       } else {
         this.resetForm();
       }
@@ -206,19 +220,19 @@ export default {
     },
   },
   computed: {
-    // Return name and surname of first user at users array.
+    // Return name and surname of first user at people array.
     fullName() {
-      if (this.users[0] === undefined) {
+      if (this.people[0] === undefined) {
         return "";
       }
 
-      return this.users[0].name + " " + this.users[0].surname;
+      return this.people[0].name + " " + this.people[0].surname;
     },
   },
   data() {
     return {
       tabIndex: 0,
-      users: [],
+      people: [],
       form: {
         name: null,
         surname: null,
@@ -233,16 +247,16 @@ export default {
   },
   methods: {
     /**
-     * Push new user to  users array or change user at users array.
+     * Push new user to  people array or change user at people array.
      */
     submit() {
-      let filledUser = this.users.find((item) => item.tc === this.form.tc);
+      let filledUser = this.people.find((item) => item.tc === this.form.tc);
       if (filledUser) {
-        this.users[this.tabIndex] = {
+        this.people[this.tabIndex] = {
           ...this.form,
         };
       } else {
-        this.users.push(this.form);
+        this.people.push(this.form);
         this.$v.$reset();
         this.resetForm();
         setTimeout(() => {

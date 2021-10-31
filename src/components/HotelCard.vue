@@ -2,9 +2,11 @@
   <b-col md="12">
     <div class="hotel-card m-2">
       <b-row>
+        <!-- Hotel Image -->
         <b-col md="6" lg="2">
           <b-card-img :src="hotel.image" alt="" />
         </b-col>
+        <!-- Hotel Card Header -->
         <b-col md="3" lg="5">
           <b-card-title :title="hotel.name" />
           <b-form-rating
@@ -19,6 +21,7 @@
             {{ hotel.description }}
           </b-card-body>
         </b-col>
+        <!-- Hotel Details -->
         <b-col md="3" lg="5">
           <div class="hotel-card__details">
             <div>
