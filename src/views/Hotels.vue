@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hotel-list :data="hotels" v-if="onlyHotel" />
+    <hotel-list :hotels="hotels" v-if="onlyHotel" />
     <router-view></router-view>
   </div>
 </template>
@@ -16,7 +16,6 @@ export default {
     return {
       hotels: [], // Array of hotels
       onlyHotel: true, // Control that url has id as param.
-
     };
   },
   watch: {
@@ -29,8 +28,8 @@ export default {
     },
   },
   created() {
-    const city = this.$route.params.city;
-    this.hotels = [...hotelData.find((item) => item.city.toLowerCase() === city).hotels];
+    const city = this.$route.params.city; // Get city param from url.
+    this.hotels = [...hotelData.find((item) => item.city.toLowerCase() === city).hotels]; // Get hotels from hotelData using city param.
   },
 };
 </script>

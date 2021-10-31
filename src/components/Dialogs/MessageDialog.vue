@@ -7,13 +7,14 @@
 <script>
 export default {
   props: {
+    // Message text.
     message: {
       type: String,
       required: true,
     },
   },
   methods: {
-    // Push to Home.
+    // Push to Home when dialog is hidden.
     hiddenDialog() {
       this.$router.push("/");
     },

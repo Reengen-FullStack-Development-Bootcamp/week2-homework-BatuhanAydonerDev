@@ -86,7 +86,7 @@ export default {
     };
   },
   methods: {
-    // Hide dialog and emit to parent.
+    // Hide dialog and emit to parent dialog is hidden.
     submit() {
       this.$refs["payment-dialog"].hide();
       this.$emit("paid");

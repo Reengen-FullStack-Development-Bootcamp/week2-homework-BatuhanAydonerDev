@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <city-list :data="allHotels" />
+    <city-list :cities="allHotels" />
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      allHotels: [...hotels], // Array of hotel
+      allHotels: [...hotels], // Array of hotel.
     };
   },
 };

@@ -194,7 +194,7 @@ export default {
         },
       });
     },
-    // Returns total price.
+    // Returns total price to show instead of old price.
     price() {
       return (
         this.hotel.price * this.reservation.numberOfPeople * this.reservation.numberOfDays

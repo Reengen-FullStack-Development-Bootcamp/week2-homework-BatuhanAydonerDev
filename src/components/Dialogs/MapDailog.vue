@@ -13,9 +13,11 @@
 <script>
 export default {
   props: {
+    // Hotel name.
     hotelName: {
       type: String,
     },
+    // Coordinates of hotel.
     coordinates: {
       type: Object,
       required: true,

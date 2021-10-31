@@ -17,6 +17,7 @@
 <script>
 export default {
   props: {
+    // City at hotels.json.
     city: {
       type: Object,
       required: true,
@@ -25,6 +26,7 @@ export default {
   methods: {
     /**
      * Push to Hotels page.
+     * It is used when card is clicked.
      * @param {number} id - Id of city.
      */
     selectCity(city) {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-row>
-      <city-card v-for="(city, i) in data" :key="i" :city="city" />
+      <city-card v-for="(city, i) in cities" :key="i" :city="city" />
     </b-row>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   },
   props: {
     // Array of city
-    data: {
+    cities: {
       type: Array,
       required: true,
     },

@@ -63,6 +63,7 @@ export default {
   methods: {
     /**
      * Push to Hotel page.
+     * It is used when hotel is selected.
      * @param {number} id - Id of hotel.
      */
     selectHotel(id) {
