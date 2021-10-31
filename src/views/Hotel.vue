@@ -3,7 +3,7 @@
     <b-col sm="12" md="6">
       <b-carousel
         id="carousel-fade"
-        style="text-shadow: 0px 0px 2px #000"
+        style="text-shadow: 0px 0px 2px #000; height: 300px"
         fade
         controls
         label-prev=""
@@ -16,7 +16,9 @@
           v-for="(photo, i) in hotel.photos"
           :key="i"
           :img-src="photo"
-          style="width: 100%; height: 400px"
+          img-width="10px !important"
+          class="hotel-carousel-slide-image"
+          style="width: 100%; height: 300px"
         ></b-carousel-slide>
       </b-carousel>
       <div class="hotel-header">

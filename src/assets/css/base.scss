@@ -112,6 +112,13 @@
   align-items: center;
 }
 
+.hotel-carousel-slide-image {
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 .hotel-comments {
   & .comment {
     .header {
