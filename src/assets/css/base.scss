@@ -4,18 +4,18 @@
   color: white;
 }
 
-.country-card {
+.city-card {
   max-width: 540px;
   max-height: 240px;
   overflow: hidden;
   cursor: pointer;
 }
 
-.country-card img {
+.city-card img {
   transition: all 0.3s linear !important;
 }
 
-.country-card:hover img {
+.city-card:hover img {
   transform: scale(1.1);
 }
 

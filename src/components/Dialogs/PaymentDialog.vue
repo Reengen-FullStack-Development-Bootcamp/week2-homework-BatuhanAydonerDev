@@ -82,7 +82,6 @@ export default {
       fullName: null,
       creditCardNo: "",
       endDate: "",
-      endDateText: "",
       cvv: null,
     };
   },

@@ -13,6 +13,7 @@ export default {
     },
   },
   methods: {
+    // Push to Home.
     hiddenDialog() {
       this.$router.push("/");
     },

@@ -212,7 +212,7 @@ export default {
     },
   },
   computed: {
-    // Return name and surname of first user at users.
+    // Return name and surname of first user at users array.
     fullName() {
       if (this.users[0] === undefined) {
         return "";
@@ -239,7 +239,7 @@ export default {
   },
   methods: {
     /**
-     * Save or change user.
+     * Push new user to  users array or change user at users array.
      */
     submit() {
       let filledUser = this.users.find((item) => item.tc === this.form.tc);

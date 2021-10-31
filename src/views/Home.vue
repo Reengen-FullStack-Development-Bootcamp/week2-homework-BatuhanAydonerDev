@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <country-list :data="allHotels" />
+    <city-list :data="allHotels" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import hotels from "../data/hotels.json";
-import CountryList from "../components/CountryList.vue";
+import CityList from "../components/CityList.vue";
 
 export default {
   components: {
-    CountryList,
+    CityList,
   },
   data() {
     return {

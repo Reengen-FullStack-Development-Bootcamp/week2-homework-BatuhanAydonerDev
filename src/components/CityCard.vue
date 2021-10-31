@@ -2,13 +2,13 @@
   <b-col md="4">
     <b-card
       overlay
-      :img-src="item.countryImage"
+      :img-src="city.cityImage"
       img-alt="Card Image"
       text-variant="white"
-      :title="item.city"
-      :sub-title="`${item.hotels.length} Hotel(s)`"
-      class="country-card m-2"
-      @click="selectCountry(item.city)"
+      :title="city.city"
+      :sub-title="`${city.hotels.length} Hotel(s)`"
+      class="city-card m-2"
+      @click="selectCity(city.city)"
     >
     </b-card>
   </b-col>
@@ -17,13 +17,17 @@
 <script>
 export default {
   props: {
-    item: {
+    city: {
       type: Object,
       required: true,
     },
   },
   methods: {
-    selectCountry(city) {
+    /**
+     * Push to Hotels page.
+     * @param {number} id - Id of city.
+     */
+    selectCity(city) {
       this.$router.push({ name: "Hotels", params: { city: city.toLowerCase() } });
     },
   },

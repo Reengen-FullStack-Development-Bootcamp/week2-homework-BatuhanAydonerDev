@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-row>
-      <hotel-card v-for="(item, i) in data" :key="i" :item="item" />
+      <hotel-card v-for="(hotel, i) in data" :key="i" :hotel="hotel" />
     </b-row>
   </div>
 </template>
@@ -14,6 +14,7 @@ export default {
     HotelCard,
   },
   props: {
+    // Array of hotel
     data: {
       type: Array,
       required: true,

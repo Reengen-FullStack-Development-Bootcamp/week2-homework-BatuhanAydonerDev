@@ -2,7 +2,7 @@
   {
     "id": 1,
     "city": "Barcelona",
-    "countryImage": "https://media.istockphoto.com/photos/spanish-cities-la-sagrada-familia-barcelona-golden-hour-picture-id875273240?b=1&k=20&m=875273240&s=170667a&w=0&h=EKaHhTcVBk_UFe_Zuao1ljPjdizwPw05zO1jyry188w=",
+    "cityImage": "https://media.istockphoto.com/photos/spanish-cities-la-sagrada-familia-barcelona-golden-hour-picture-id875273240?b=1&k=20&m=875273240&s=170667a&w=0&h=EKaHhTcVBk_UFe_Zuao1ljPjdizwPw05zO1jyry188w=",
     "hotels": [
       {
         "id": 1,
@@ -137,7 +137,7 @@
   {
     "id": 2,
     "city": "Paris",
-    "countryImage": "https://media.istockphoto.com/photos/aerial-panoramic-cityscape-view-of-paris-france-picture-id877496736?k=20&m=877496736&s=612x612&w=0&h=IBsouHf6pGbNHJ66P_ejLjI0mvek3tP6RWuDcpfGGgE=",
+    "cityImage": "https://media.istockphoto.com/photos/aerial-panoramic-cityscape-view-of-paris-france-picture-id877496736?k=20&m=877496736&s=612x612&w=0&h=IBsouHf6pGbNHJ66P_ejLjI0mvek3tP6RWuDcpfGGgE=",
     "hotels": [
       {
         "id": 3,
@@ -208,7 +208,7 @@
   {
     "id": 3,
     "city": "Rome",
-    "countryImage": "https://www.fodors.com/wp-content/uploads/2018/10/HERO_UltimateRome_Hero_shutterstock789412159.jpg",
+    "cityImage": "https://www.fodors.com/wp-content/uploads/2018/10/HERO_UltimateRome_Hero_shutterstock789412159.jpg",
     "hotels": [
       {
         "id": 4,

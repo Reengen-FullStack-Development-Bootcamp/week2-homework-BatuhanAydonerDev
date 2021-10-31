@@ -1,19 +1,20 @@
 <template>
   <div>
     <b-row>
-      <country-card v-for="(item, i) in data" :key="i" :item="item" />
+      <city-card v-for="(city, i) in data" :key="i" :city="city" />
     </b-row>
   </div>
 </template>
 
 <script>
-import CountryCard from "./CountryCard.vue";
+import CityCard from "./CityCard.vue";
 
 export default {
   components: {
-    CountryCard,
+    CityCard,
   },
   props: {
+    // Array of city
     data: {
       type: Array,
       required: true,
