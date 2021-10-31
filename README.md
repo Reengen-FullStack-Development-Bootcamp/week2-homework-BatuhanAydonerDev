@@ -1,4 +1,4 @@
-# bookingany-vuejs
+# bookingany - Vuejs
 
 This is a mini vuejs project.
 
