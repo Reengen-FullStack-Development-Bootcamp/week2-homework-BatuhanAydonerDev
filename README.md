@@ -1,24 +1,20 @@
-# bookingany-vuejs
+# bookingany - Vuejs
 
-## Project setup
-```
-npm install
-```
+This is a mini vuejs project.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Demo website: 
+https://bookingany-vuejs.vercel.app/
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<img src="https://github.com/BatuhanAydonerDev/bookingany-vuejs/blob/master/bookinganyvuejs.gif?raw=true" alt="Github Finder - VUEJS" width="600" />
 
-### Lints and fixes files
-```
-npm run lint
-```
+## About The Project
+- [x] Component Structure
+- [x] Responsive design
+- [x] Routing (Vue Router)
+- [x] Form validation (Vuelidate) 
+- [x] Bootstrap-vue
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Used Libraries
+- [Vue Router](https://router.vuejs.org/)
+- [Vuelidate](https://vuelidate.js.org/)
+- [Bootstrap-vue](https://bootstrap-vue.org/)
